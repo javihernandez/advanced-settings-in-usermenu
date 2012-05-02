@@ -5,8 +5,7 @@ const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const GLib = imports.gi.GLib;
 const PopupMenu = imports.ui.popupMenu;
-const Gettext = imports.gettext;
-
+const Gettext = imports.gettext.domain("advanced-settings-in-usermenu@nuware.ru");
 const _ = Gettext.gettext;
 
 let item, userMenu;
@@ -18,7 +17,6 @@ function _onAdvancedSettingsActivate() {
 }
 
 function init(extensionMeta) {
-    Gettext.bindtextdomain("advanced-settings-in-usermenu@nuware.ru", GLib.build_filenamev([extensionMeta.path, 'locale']));
     userMenu = Main.panel._statusArea.userMenu.menu;
 }
 

@@ -7,7 +7,7 @@ const GLib = imports.gi.GLib;
 const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext;
 
-const _ = Gettext.gettext;
+const _ = Gettext.domain("advanced-settings-in-usermenu@nuware.ru").gettext;
 
 let item, userMenu;
 

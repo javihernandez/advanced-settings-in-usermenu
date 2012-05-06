@@ -17,6 +17,7 @@ function _onAdvancedSettingsActivate() {
 }
 
 function init(extensionMeta) {
+    imports.gettext.bindtextdomain("advanced-settings-in-usermenu@nuware.ru", GLib.build_filenamev([extensionMeta.path, 'locale']))
     userMenu = Main.panel._statusArea.userMenu.menu;
 }
 
